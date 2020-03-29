@@ -64,8 +64,8 @@ class Student
     self.new(id, name, grade)
   end 
   
-  def update 
-    sql = "UPDATE songs SET name = ?, album = ? WHERE name = ?"
+  def update
+    sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
     DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
 
